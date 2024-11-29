@@ -86,11 +86,35 @@ function App() {
     return name;
   }
   
+
+  function add (a,b){
+    const result = a+b;
+    return result ;
+  }
+
+  function sub(a,b){
+    const result = a-b;
+    return result;
+  }
+
+  function mul (a,b){
+    const result= a*b;
+    return result;
+  }
+
+  function div (a,b){
+    const result= a/b;
+    return result;
+  }
   return (
     <div className="App">
     <p>Name: {getName ()}</p>
     <p>Result: {add(10,10)}</p>
     <p>verified: {(verified ==true) ? "yes" : "no"}</p>
+    <p> result add:{add (2,2)}</p>
+    <p> result sub:{sub (2,2)}</p>
+    <p> result mul:{mul (2,2)}</p>
+    <p> result div:{div (2,2)}</p>
     </div>
     );
 }
