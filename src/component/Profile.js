@@ -3,21 +3,32 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function Profile() {
+function profile({profile}) {
     
  
     return (
         
         <Card style={{ width: '18rem', }} className='col-md-4'>
-        <Card.Img variant="top"src="https://avatars.githubusercontent.com/u/182937907?v=4                    " />
+        <Card.Img variant="top"src={profile.img} />
         <Card.Body>
-          <Card.Title>Basheer</Card.Title>
+          <Card.Title>{profile.name}</Card.Title>
           <Card.Text>
-            I am studing in BCA
+           {profile.decs}
           </Card.Text>
-          <a variant="primary" href="https://github.com/Basheer107">open profile</a>
+          <a variant="primary" href={profile.link} target='blank'>
+          <Button>{profile.btn}</Button></a>
         </Card.Body>
       </Card>
       );
   }
-  export default Profile
+  export default profile;
+  // <div className='container'>
+  //      <h1>Basic Game</h1>
+  //     <div className='row'>
+  //     <Profile name="Vocab" location="kausa"/>
+  //     </div>
+     
+    
+  //     {/* <Btn name="Sign up"/> */}
+  //   </div>
+  //   );
